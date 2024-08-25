@@ -40,11 +40,10 @@ root(ROOTS.Zones, m(KHAZ_ALGAR, bubbleDown({ ["timeline"] = { ADDED_11_0_2 } }, 
 					["provider"] = { "n", 213116 },	-- Faerin
 					["coord"] = { 70.1, 61.0, HALLOWFALL },
 					["g"] = {
-						i(213191),	-- Arathi Tinderbox (QI!)
-						i(220109),	-- Chainmail of Sina's Stalwarts
-						i(220112),	-- Cowl of Sina's Stalwarts
-						i(220110),	-- Greaves of Sina's Stalwarts
-						i(220108),	-- Helm of Sina's Stalwarts
+						i(220126),	-- Lamplighter's Cinch
+						i(220125),	-- Lamplighter's Epaulets
+						i(220119),	-- Lamplighter's Handwraps
+						i(220127),	-- Lamplighter's Sabatons
 					},
 				}),
 				q(78668, {	-- Rally on the Dawnbreaker
@@ -61,6 +60,7 @@ root(ROOTS.Zones, m(KHAZ_ALGAR, bubbleDown({ ["timeline"] = { ADDED_11_0_2 } }, 
 					["coord"] = { 57.5, 64.4, HALLOWFALL },
 					["g"] = {
 						i(213630),	-- Keg of Black Powder (QI!)
+						i(220118),	-- Arathi Demolition Charge
 					},
 				}),
 				q(78669, {	-- For Their Eyes Only
@@ -161,10 +161,11 @@ root(ROOTS.Zones, m(KHAZ_ALGAR, bubbleDown({ ["timeline"] = { ADDED_11_0_2 } }, 
 					["provider"] = { "n", 221733 },	-- Faerin Lothar
 					["coord"] = { 55.8, 43.4, HALLOWFALL },
 					["g"] = {
-						i(220126),	-- Lamplighter's Cinch
-						i(220125),	-- Lamplighter's Epaulets
-						i(220119),	-- Lamplighter's Handwraps
-						i(220127),	-- Lamplighter's Sabatons
+						i(213191),	-- Arathi Tinderbox (QI!)
+						i(220109),	-- Chainmail of Sina's Stalwarts
+						i(220112),	-- Cowl of Sina's Stalwarts
+						i(220110),	-- Greaves of Sina's Stalwarts
+						i(220108),	-- Helm of Sina's Stalwarts
 					},
 				}),
 				------ Chapter 3 ------
@@ -422,6 +423,7 @@ root(ROOTS.Zones, m(KHAZ_ALGAR, bubbleDown({ ["timeline"] = { ADDED_11_0_2 } }, 
 					["maps"] = { 2308, 2309 },	-- Priory of the Sacred Flame
 					["g"] = {
 						i(226139),	-- Arathi Officer's Gauntlets
+						i(226134),	-- Mourning Baron's Shoulderpads
 					},
 				}),
 			}),
@@ -562,8 +564,13 @@ root(ROOTS.Zones, m(KHAZ_ALGAR, bubbleDown({ ["timeline"] = { ADDED_11_0_2 } }, 
 				}),
 			}),
 			header(HEADERS.AchCriteria, 40844.05, {	-- The Sky's the Limit
-				q(79304, {	-- 	-- Care Package
-					["isBreadcrumb"] = true,	-- But I didn't find it
+				q(79304, {	-- Care Package
+					["provider"] = { "n", 217609 },	-- Barahl Lynflayme
+					["coord"] = { 69.2, 43.8, HALLOWFALL },
+					["isBreadcrumb"] = true,
+					["g"] = {
+						i(228409),	-- Valrin's Sweetrolls (QI!)
+					},
 				}),
 				q(79300, {	-- The Notebook
 					["sourceQuests"] = { 79304 },	-- Care Package
@@ -595,9 +602,14 @@ root(ROOTS.Zones, m(KHAZ_ALGAR, bubbleDown({ ["timeline"] = { ADDED_11_0_2 } }, 
 				}),
 			}),
 			header(HEADERS.AchCriteria, 40844.06, {	-- Crushing Depths
-				q(81797),	-- Targeted Recon
-				q(80312, {	-- Gasping Plea
+				q(81797, {	-- Targeted Recon
 					["sourceQuests"] = { TEMPORARY_SOURCEQUEST },
+					["provider"] = { "n", 218508 },	-- Joseph Brayvemarc
+					["coord"] = { 42.6, 55.3, HALLOWFALL },
+					["isBreadcrumb"] = true,
+				}),
+				q(80312, {	-- Gasping Plea
+					["sourceQuests"] = { 81797 },	-- Targeted Recon
 					["provider"] = { "i", 217352 },	-- Gasping Fish (QI!)
 				}),
 				q(80313, {	-- Tidal Charms
@@ -679,8 +691,10 @@ root(ROOTS.Zones, m(KHAZ_ALGAR, bubbleDown({ ["timeline"] = { ADDED_11_0_2 } }, 
 					["provider"] = { "n", 215301 },	-- Shinda Creedpike
 					["coord"] = { 40.7, 50.6, HALLOWFALL },
 					["g"] = {
+						i(228366),	-- Child's Former Fishing Rod
 						i(228365),	-- Concerned Captain's Cudgel
-						i(228362),	-- Shinda's Spare Greataxe
+						i(228362),	-- Polished Arathi Rifle
+						i(228363),	-- Shinda's Spare Greataxe
 					},
 				}),
 				q(79162, {	-- Burnout
@@ -894,8 +908,8 @@ root(ROOTS.Zones, m(KHAZ_ALGAR, bubbleDown({ ["timeline"] = { ADDED_11_0_2 } }, 
 					["coord"] = { 68.1, 44.2, HALLOWFALL },
 					["g"] = {
 						i(225179),	-- Salamanther Heart (QI!)
-						--
 						i(228438),	-- Derill's Unused Visor
+						i(228435),	-- Wine-Dyed Leggings
 					},
 				}),
 				q(83279),	-- Prove One's Mettle
@@ -978,7 +992,11 @@ root(ROOTS.Zones, m(KHAZ_ALGAR, bubbleDown({ ["timeline"] = { ADDED_11_0_2 } }, 
 			}),
 			q(79221, {	-- The Unusual Bug
 				["provider"] = { "i", 212331 },	-- The Unusual Bug (QI!)
-				["coord"] = { 67.2, 19.2, HALLOWFALL },
+				["maps"] = { AZJ_KAHET },
+			}),
+			q(81640, {	-- Tenir and the Order of Night
+				["provider"] = { "i", 219384 },	-- Umbral Eggplant (QI!)
+				["maps"] = { ISLE_OF_DORN },
 			}),
 			q(82894, {	-- The Price of Hope
 				["sourceQuests"] = { TEMPORARY_SOURCEQUEST },
@@ -1064,6 +1082,47 @@ root(ROOTS.Zones, m(KHAZ_ALGAR, bubbleDown({ ["timeline"] = { ADDED_11_0_2 } }, 
 					},
 				}),
 			}),
+
+			-- Stay a while
+			hqt(79706, {	-- Stay awhile and listen: Faerin Lothar
+				["name"] = "Stay awhile and listen: Faerin Lothar",
+				["sourceQuests"] = { 78613 },	-- The Bastion of Hallowfall
+				["provider"] = { "n", 220406 },	-- Faerin Lothar
+				["coord"] = { 43.2, 56.2, HALLOWFALL },
+			}),
+			hqt(79971, {	-- Stay awhile and listen: Alleria Windrunner
+				["name"] = "Stay awhile and listen: Alleria Windrunner",
+				["sourceQuests"] = { 78613 },	-- The Bastion of Hallowfall
+				["provider"] = { "n", 220402 },	-- Alleria Windrunner
+				["coord"] = { 41.7, 56.8, HALLOWFALL },
+			}),
+			hqt(81636, {	-- Stay awhile and listen: General Steelstrike
+				["name"] = "Stay awhile and listen: General Steelstrike",
+				["sourceQuests"] = { 78626 },	-- Spar Day
+				["provider"] = { "n", 213108 },	-- General Steelstrike
+				["coord"] = { 41.2, 52.9, HALLOWFALL },
+			}),
+			hqt(82538, {	-- Stay awhile and listen: General Steelstrike
+				["name"] = "Stay awhile and listen: General Steelstrike",
+				--["sourceQuests"] = main campaign or piory sidequest?
+				["provider"] = { "n", 213108 },	-- General Steelstrike #could be wrong here
+				["coord"] = { 42.3, 55, HALLOWFALL },
+			}),
+			hqt(81631, {	-- Stay awhile and listen: Faerin Lothar
+				["name"] = "Stay awhile and listen: Faerin Lothar",
+				["sourceQuests"] = { 78624 },	-- A Candle in the Dark
+				["provider"] = { "n", 213107 },	-- Faerin Lothar
+				["coord"] = { 33.5, 54.8, HALLOWFALL },
+			}),
+			hqt(81594, {	-- Stay awhile and listen: Faerin Lothar
+				["name"] = "Stay awhile and listen: Faerin Lothar",
+				["sourceQuests"] = {
+					78932,	-- Fickle Fiendish Fish
+					78929,	-- Tricks of the Dark
+				},
+				["provider"] = { "n", 214378 },	-- Faerin
+				["coord"] = { 53.9, 30.7, HALLOWFALL },
+			}),
 		}),
 	}),
 })));
@@ -1072,12 +1131,7 @@ root(ROOTS.HiddenQuestTriggers, {
 	-- During questing
 	q(83614),	-- [DNT] Zone 3 Bread Crumb Completed Organically (spellID 456930), after turn in questID 78658 (The Hallowed Path)
 	q(79654),	-- [DNT] Hallowfall Arathi Renown Unlock (spellID 448657)
-	q(81594),	-- [DNT] Complete Tracking Quest (spellID 443002), after turn in questID 78932 (Fickle Fiendish Fish) (could be rp unlock for 'Stay a while and listen' Faerin during Blades of the Arathi? Activation of this dialog didn't fire any quest)
-	q(79971),	-- Stay a while and listen - Alleria Windrunner, during questID 79971 (Nightwatch)
-	q(79706),	-- Stay a while and listen - Faerin Lothar, during questID 79971 (Nightwatch)
 	--q(82538),	-- Stay a while and listen - General Steelstrike, before turn in questID 78626 (Spar Day)
-	q(81636),	-- Stay a while and listen - General Steelstrike, after turn in questID 78626 (Spar Day)
-	q(81631),	-- Stay a while and listen - Faerin Lothar, after pick up questID 80049 (The Flame Still Burns)
 	q(81635),	-- Stay a while and listen - Nalina Ironsong @ 42.7, 55.8, HALLOWFALL (n: 217642) (idk when become available)
 	-- questID 79303 (A Principled Principal) nodes
 	q(83287),	-- should accept work

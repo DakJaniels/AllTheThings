@@ -95,6 +95,13 @@ root(ROOTS.Zones, m(KHAZ_ALGAR, bubbleDown({ ["timeline"] = { ADDED_11_0_2 } }, 
 					i(224575),	-- Lightbearer's Pendant
 				},
 			}),
+			-- o(???, {	-- Sky-Captain Lancekat's Curse
+			-- 	["questID"] = 84289,
+			-- 	["coord"] = { 42.6, 53.7, HALLOWFALL },
+			-- 	["g"] = {
+			-- 		i(225213),	-- Sky-Captain Lancekat's Curse
+			-- 	}
+			-- }),
 			o(453283, {	-- Smuggler's Treasure
 				["description"] = "Fly down to dead body and loot key",
 				["coord"] = { 55.1, 51.9, HALLOWFALL },
@@ -115,7 +122,7 @@ root(ROOTS.Zones, m(KHAZ_ALGAR, bubbleDown({ ["timeline"] = { ADDED_11_0_2 } }, 
 				},
 			}),
 			o(454797, {	-- From the Depths They Come
-				["coord"] = { 57.8, 84.2, HALLOWFALL },
+				["coord"] = { 57.8, 51.7, HALLOWFALL },
 				--["questID"] = ,
 				["g"] = {
 					i(225208),	-- From the Depths They Come [book]
@@ -177,6 +184,13 @@ root(ROOTS.Zones, m(KHAZ_ALGAR, bubbleDown({ ["timeline"] = { ADDED_11_0_2 } }, 
 					i(225203),	-- Beledar- The Emperor's Vision [book]
 				},
 			}),
+			o(439473, {	-- Tenir and the Order of Night
+				["description"] = "In the basement",
+				["coord"] = { 63.5, 29.5, HALLOWFALL },
+				["g"] = {
+					i(219384),	-- Tenir and the Order of Night
+				},
+			}),
 			o(453754, {	-- The Song of Renilash
 				["coord"] = { 70.2, 56.8, HALLOWFALL },
 				["questID"] = 83313,
@@ -189,6 +203,13 @@ root(ROOTS.Zones, m(KHAZ_ALGAR, bubbleDown({ ["timeline"] = { ADDED_11_0_2 } }, 
 				["questID"] = 83314,
 				["g"] = {
 					i(225212),	-- The Big Book of Arathi Idioms [book]
+				},
+			}),
+			o(419729, {	-- Strange Eggs
+				["coord"] = { 67.1, 21.8, HALLOWFALL },
+				["questID"] = 83032,
+				["g"] = {
+					i(212331),	-- The Unusual Bug
 				},
 			}),
 			o(441611, {	-- Windswept Satchel

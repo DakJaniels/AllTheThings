@@ -50,7 +50,6 @@ root(ROOTS.Zones, m(KHAZ_ALGAR, bubbleDown({ ["timeline"] = { ADDED_11_0_2 } }, 
 					--["coord"] = { 1, 1, AZJ_KAHET },
 				}),
 			}),
-			ach(40619),		-- Mine Poppin'
 			ach(40843),		-- Mine Poppin'
 			ach(40632),		-- No Harm Ever Came From Reading A Book
 			ach(40727),		-- Skittershaw Spin
@@ -82,7 +81,7 @@ root(ROOTS.Zones, m(KHAZ_ALGAR, bubbleDown({ ["timeline"] = { ADDED_11_0_2 } }, 
 				["coord"] = { 66.3, 85.1, AZJ_KAHET },
 			}),
 			ach(40700, {	-- Skyriding Glyphs: Trickling Abyss
-				["coord"] = { 70.4, 19.4, AZJ_KAHET },
+				["coord"] = { 70.5, 25.2, AZJ_KAHET },
 			}),
 			ach(40701, {	-- Skyriding Glyphs: Untamed Valley
 				["coord"] = { 65.4, 51.7, AZJ_KAHET },

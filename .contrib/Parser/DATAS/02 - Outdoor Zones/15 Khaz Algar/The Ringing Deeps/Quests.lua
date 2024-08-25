@@ -18,7 +18,9 @@ root(ROOTS.Zones, m(KHAZ_ALGAR, bubbleDown({ ["timeline"] = { ADDED_11_0_2 } }, 
 					["provider"] = { "n", 212592 },	-- Speaker Brinthe
 					["coord"] = { 42.1, 28.3, THE_RINGING_DEEPS },
 					["g"] = {
-						i(216720),	-- Valuable Parts (QI!)
+						o(425875, {	-- Priority Transport Crate
+							i(216720),	-- Valuable Parts (QI!)
+						}),
 					},
 				}),
 				q(78557, {	-- Getting Off Track
@@ -125,8 +127,16 @@ root(ROOTS.Zones, m(KHAZ_ALGAR, bubbleDown({ ["timeline"] = { ADDED_11_0_2 } }, 
 					["provider"] = { "n", 212991 },	-- Skitter
 					["coord"] = { 61.5, 32.0, THE_RINGING_DEEPS },
 					["g"] = {
-						i(217015),	-- Unstable Cinderbrew Barrel (QI!)
-						i(212177),	-- Useful Looking Scrap (QI!)
+						o(428699, {	-- Sizzling Barrel
+							i(217015),	-- Unstable Cinderbrew Barrel (QI!)
+						}),
+						o_repeated({
+							i(212177),	-- Useful Looking Scrap (QI!)
+							o(417136),	-- Intriguing Scrap
+							o(417137),	-- Intriguing Scrap
+							o(417138),	-- Intriguing Scrap
+							o(411878),	-- Intriguing Scrap
+						}),
 					},
 				}),
 				q(78641, {	-- Tackling Torchsnarl
@@ -158,7 +168,9 @@ root(ROOTS.Zones, m(KHAZ_ALGAR, bubbleDown({ ["timeline"] = { ADDED_11_0_2 } }, 
 						i(212575),	-- The Candle Keys (QI!)
 						i(219466),	-- Earthen Traveler's Chopper
 						i(219462),	-- Earthen Traveler's Claymore
+						i(219467),	-- Earthen Traveler's Fist
 						i(219461),	-- Earthen Traveler's Gavel
+						i(219460),	-- Earthen Traveler's Handaxe
 						i(219463),	-- Earthen Traveler's Javelin
 						i(219457),	-- Earthen Traveler's Saber
 						i(219459),	-- Earthen Traveler's Staff
@@ -271,6 +283,7 @@ root(ROOTS.Zones, m(KHAZ_ALGAR, bubbleDown({ ["timeline"] = { ADDED_11_0_2 } }, 
 					["sourceQuests"] = { 78741 },	-- Sympathetic Speaker
 					["provider"] = { "n", 213672 },	-- Foreman Uzjax
 					["coord"] = { 49.0, 17.5, THE_RINGING_DEEPS },
+					["isBreadcrumb"] = true,
 				}),
 				q(78760, {	-- Dark Iron from Above
 					["sourceQuests"] = {
@@ -284,7 +297,7 @@ root(ROOTS.Zones, m(KHAZ_ALGAR, bubbleDown({ ["timeline"] = { ADDED_11_0_2 } }, 
 					["sourceQuests"] = { 78760 },	-- Dark Iron from Above
 					["provider"] = { "n", 213796 },	-- Moira Thaurissan
 					["coord"] = { 46.7, 10.3, THE_RINGING_DEEPS },
-					--["maps"] = { x },	-- probably will be scenario mapID but it is not here on alpha
+					["maps"] = { 2368 },	-- Hall of Awakening
 					["g"] = {
 						i(219018),	-- Esteemed Earthen Emblem
 					},
@@ -474,9 +487,15 @@ root(ROOTS.Zones, m(KHAZ_ALGAR, bubbleDown({ ["timeline"] = { ADDED_11_0_2 } }, 
 					["provider"] = { "n", 212695 },	-- Machinist Kittrin
 					["coord"] = { 48.2, 33.4, THE_RINGING_DEEPS },
 					["g"] = {
-						i(210732),	-- Machinist's Calipers (QI!)
-						i(210733),	-- Machinist's Gauge (QI!)
-						i(210734),	-- Machinist's Wrench (QI!)
+						o(411622, {	-- Machinist Plinth
+							i(210732),	-- Machinist's Calipers (QI!)
+						}),
+						o(411623, {	-- Machinist Plinth
+							i(210733),	-- Machinist's Gauge (QI!)
+						}),
+						o(411624, {	-- Machinist Plinth
+							i(210734),	-- Machinist's Wrench (QI!)
+						}),
 					},
 				}),
 				q(78563, {	-- The Weight of a World
@@ -810,7 +829,10 @@ root(ROOTS.Zones, m(KHAZ_ALGAR, bubbleDown({ ["timeline"] = { ADDED_11_0_2 } }, 
 				}),
 				q(79683, {	-- Home is Where the Candle Is
 					["sourceQuests"] = { 80082 },	-- Back to Gundargaz	// but could be renown?
-					["provider"] = { "n", 222803 },	-- Skitter
+					["providers"] = {
+						{ "n", 222803 },	-- Skitter
+						{ "n", 213152 },	-- Skitter
+					},
 					["coord"] = { 47.1, 33.3, THE_RINGING_DEEPS },
 					["g"] = {
 						i(223625),	-- Cinderwold Sizzlestinger (PET!)
@@ -905,9 +927,12 @@ root(ROOTS.Zones, m(KHAZ_ALGAR, bubbleDown({ ["timeline"] = { ADDED_11_0_2 } }, 
 					["sourceQuests"] = { TEMPORARY_SOURCEQUEST },
 					["provider"] = { "n", 216438 },	-- Granny Scribbles
 					["coord"] = { 48.0, 35.7, THE_RINGING_DEEPS },
+					-- Instance ID 2601
 					--["maps"] = { x },	-- could be scenario mapID but it is not here?
 					["g"] = {
-						i(217997),	-- Shiny Rock (QI!)
+						o(421525, {	-- Shinies
+							i(217997),	-- Shiny Rock (QI!)
+						}),
 						i(217998),	-- Sweetmeat (QI!)
 					},
 				}),
@@ -915,34 +940,50 @@ root(ROOTS.Zones, m(KHAZ_ALGAR, bubbleDown({ ["timeline"] = { ADDED_11_0_2 } }, 
 					["sourceQuests"] = { 79504 },	-- Dripsy Forgot Her Candle
 					["provider"] = { "n", 216438 },	-- Granny Scribbles
 					["coord"] = { 48.0, 35.7, THE_RINGING_DEEPS },
+					-- Instance ID 2601
 					--["maps"] = { x },	-- could be scenario mapID
 				}),
 				q(79507, {	-- The Day the Stoneheads Came
 					["sourceQuests"] = { 79505 },	-- Chomps and the Cave-In
 					["provider"] = { "n", 216438 },	-- Granny Scribbles
 					["coord"] = { 48.0, 35.7, THE_RINGING_DEEPS },
+					-- Instance ID 2601
 					--["maps"] = { x },	-- could be scenario mapID
 					["g"] = {
-						i(224403),	-- Heirloom Wax (QI!)
-						i(224402),	-- Krafting Tools (QI!)
-						i(224401),	-- Run Far Food (QI!)
-						i(224400),	-- See Where Running Candles (QI!)
-						i(218249),	-- Softsnout's Favorite Shovel (QI!)
+						o(421597, {	-- Village Center
+							i(224403),	-- Heirloom Wax (QI!)
+						}),
+						o(421599, {	-- Local Industry
+							i(224402),	-- Krafting Tools (QI!)
+						}),
+						o(421594, {	-- Gainful Employment
+							i(224401),	-- Run Far Food (QI!)
+						}),
+						o(421592, {	-- Life Savings
+							i(224400),	-- See Where Running Candles (QI!)
+						}),
+						o(436933, {	-- Softsnout's Favourite Shovel
+							i(218249),	-- Softsnout's Favorite Shovel (QI!)
+						}),
 					},
 				}),
 				q(79508, {	-- Mipsy Mole-Rider
 					["sourceQuests"] = { 79507 },	-- The Day the Stoneheads Came
 					["provider"] = { "n", 216438 },	-- Granny Scribbles
 					["coord"] = { 48.0, 35.7, THE_RINGING_DEEPS },
+					-- Instance ID 2601
 					--["maps"] = { x },	-- could be scenario mapID
 				}),
 				q(79510, {	-- The Wickless Candle
 					["sourceQuests"] = { 79508 },	-- Mipsy Mole-Rider
 					["provider"] = { "n", 216438 },	-- Granny Scribbles
 					["coord"] = { 48.0, 35.7, THE_RINGING_DEEPS },
+					-- Instance ID 2601
 					--["maps"] = { x },	-- could be scenario mapID
 					["g"] = {
-						i(219224),	-- Prooftelling Flower (QI!)
+						o(421735, {	-- Prooftelling Flower
+							i(219224),	-- Prooftelling Flower (QI!)
+						}),
 					},
 				}),
 			}),
@@ -1165,15 +1206,58 @@ root(ROOTS.Zones, m(KHAZ_ALGAR, bubbleDown({ ["timeline"] = { ADDED_11_0_2 } }, 
 				},
 			}),
 			-- ?
-			q(78877, {	-- Bless These Homes
-				--["sourceQuests"] = { x },	-- ?
-				["provider"] = { "n", 213875 },	-- Speaker Jurlax
-				["coord"] = { 47.0, 32.4, THE_RINGING_DEEPS },
-			}),
+
 			q(83165, {	-- Badly Behaved Bot
 				--["sourceQuests"] = { x },	-- ?
 				["provider"] = { "n", 223759 },	-- Sinruna
 				["coord"] = { 60.2, 57.0, THE_RINGING_DEEPS },
+			}),
+			------ Class Specific ------
+			q(78895, {	-- A Shadow Over Gundargaz
+				--["sourceQuests"] = { x },	-- ?
+				["provider"] = { "n", 213869 },	-- Watcher Toki
+				["coord"] = { 47.0, 32.4, THE_RINGING_DEEPS },
+				["classes"] = { DEMONHUNTER, WARLOCK },
+				["g"] = {
+					i(219919),	-- Blade of Hatred [Demon Hunter]
+					i(219923),	-- Blade of Hatred [Warlock]
+				},
+			}),
+			q(78877, {	-- Bless These Homes
+				--["sourceQuests"] = { x },	-- ?
+				["provider"] = { "n", 213875 },	-- Speaker Jurlax
+				["coord"] = { 47.0, 32.4, THE_RINGING_DEEPS },
+				["classes"] = { PRIEST, PALADIN },
+			}),
+			q(78874, {	-- Conjured Help
+				--["sourceQuests"] = { x },	-- ?
+				["provider"] = { "n", 213840 },	-- Innkeeper Brax <Innkeeper>
+				["coord"] = { 48.0, 32.2, THE_RINGING_DEEPS },
+				["classes"] = { MAGE },
+			}),
+			q(78879, {	-- Evoking the Forge
+				--["sourceQuests"] = { x },	-- ?
+				["provider"] = { "n", 213841 },	-- Foreman Svart
+				["coord"] = { 47.4, 28.4, THE_RINGING_DEEPS },
+				["classes"] = { EVOKER },
+			}),
+			q(78827, {	-- Go Take Candle!
+				--["sourceQuests"] = { x },	-- ?
+				["provider"] = { "o", 413694 },	-- Suspicious Vent
+				["coord"] = { 48.1, 32.0, THE_RINGING_DEEPS },
+				["classes"] = { ROGUE },
+			}),
+			q(78860, {	-- More Candles!
+				["sourceQuests"] = { 78827 },	-- Go Take Candle!
+				["provider"] = { "o", 413694 },	-- Suspicious Vent
+				["coord"] = { 48.1, 32.0, THE_RINGING_DEEPS },
+				["classes"] = { ROGUE },
+			}),
+			q(83326, {	-- The Final Candle
+				["sourceQuests"] = { 78860 },	-- More Candles!
+				["provider"] = { "o", 413694 },	-- Suspicious Vent
+				["coord"] = { 48.1, 32.0, THE_RINGING_DEEPS },
+				["classes"] = { ROGUE },
 			}),
 			------ Miscellaneous ------
 			q(78918, {	-- Brax's Brass Knuckles
@@ -1218,6 +1302,20 @@ root(ROOTS.Zones, m(KHAZ_ALGAR, bubbleDown({ ["timeline"] = { ADDED_11_0_2 } }, 
 					["coord"] = { 70.7, 39.8, THE_RINGING_DEEPS },
 				}),
 			}),
+
+			-- Stay a while
+			hqt(84620, {	-- Stay awhile and listen: Magni Bronzebeard
+				["name"] = "Stay awhile and listen: Magni Bronzebeard",
+				["sourceQuests"] = { 78696 },	-- We Don't Go to Taelloch
+				["provider"] = { "n", 213633 },	-- Magni Bronzebeard
+				["coord"] = { 62.3, 58.0, THE_RINGING_DEEPS },
+			}),
+			hqt(84699, {	-- Stay awhile and listen: Moira Thaurissan
+				["name"] = "Stay awhile and listen: Moira Thaurissan",
+				["sourceQuests"] = { 78738 },	-- Absent Speaker
+				["provider"] = { "n", 213763 },	-- Moira Thaurissan
+				["coord"] = { 47.0, 20.7, THE_RINGING_DEEPS },
+			}),
 		}),
 	}),
 })));
@@ -1226,7 +1324,6 @@ root(ROOTS.HiddenQuestTriggers, {
 	-- During questing
 	q(83613),	-- [DNT] Zone 2 Bread Crumb Completed Organically (spellID 456929), after turn in questID 80434 (Into the Deeps)
 	q(79635),	-- [DNT] The Assembly of the Deeps Renown Unlock (spellID 448654)
-	q(84699),	-- 'Stay a while and listen' - Moira Thaurissan (n: 213763 @ 47.0, 20.7), after questID 78760 (Dark Iron from Above). Probably.
 	-- Side quests
 	q(82652),	-- 'Stay a while and listen' - Brennok, in the end of whole speach during questID 80682 (One Last Story)
 	-- 80510 or 80509

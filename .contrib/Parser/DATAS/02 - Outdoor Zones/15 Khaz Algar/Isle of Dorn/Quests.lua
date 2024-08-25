@@ -7,16 +7,81 @@ root(ROOTS.Zones, m(KHAZ_ALGAR, bubbleDown({ ["timeline"] = { ADDED_11_0_2 } }, 
 		n(QUESTS, {
 			-- Using Questauren These gets completed (Probably Inbetween Bronzebeard Family and Violet Impact)
 			q(82199),	--
-			q(81966),	-- Slept like a Rock
 			--
 			header(HEADERS.Achievement, 20118, {	-- The Isle of Dorn
+				q(81966, {	-- Slept like a Rock
+					-- likely re-log after 80500 'The Bronzebeard Family' is completed?
+					["maps"] = { LEGION_DALARAN },
+					["isBreadcrumb"] = true,
+					["DisablePartySync"] = true,
+				}),
+				q(78717, {	-- A Mysterious Warning
+					["qg"] = 213624,	-- Magni Bronzebeard
+					["coord"] = { 45.3, 57.4, LEGION_DALARAN },
+					["sourceQuests"] = { 81966 },	-- Slept like a Rock
+				}),
+				q(78719, {	-- Citizens of Dalaran
+					["qg"] = 213627,	-- Archmage Khadgar
+					["coord"] = { 41.2, 62.3, LEGION_DALARAN },
+					["sourceQuests"] = { 78717 },	-- A Mysterious Warning
+				}),
+				q(78721, {	-- Meet the Team
+					["qg"] = 214669,	-- Brann Bronzebeard
+					["coord"] = { 47.0, 49.1, LEGION_DALARAN },
+					["sourceQuests"] = { 78717 },	-- A Mysterious Warning
+				}),
+				q(78718, {	-- Strengthen the Wards
+					["qg"] = 214665,	-- Archmage Drenden
+					["coord"] = { 56.4, 33.2, LEGION_DALARAN },
+					["sourceQuests"] = { 78717 },	-- A Mysterious Warning
+					["g"] = {
+						i(220483),	-- Tuning Wand (QI!)
+					},
+				}),
+				q(78722, {	-- To Khaz Algar!
+					["qg"] = 213627,	-- Archmage Khadgar
+					["coord"] = { 41.2, 62.3, LEGION_DALARAN },
+					["sourceQuests"] = {
+						78719,	-- Citizens of Dalaran
+						78721,	-- Meet the Team
+						78718,	-- Strengthen the Wards
+					},
+				}),
+				q(79105, {	-- Breach
+					["qg"] = 214908,	-- Alleria Windrunner
+					["coord"] = { 50.4, 50.4, 2305 },	-- Quest Dalaran
+					["sourceQuests"] = { 78722 },	-- To Khaz Algar!
+				}),
+				q(79106, {	-- Rupture
+					["qg"] = 214908,	-- Alleria Windrunner
+					["coord"] = { 35.7, 71.3, 2305 },	-- Quest Dalaran
+					["sourceQuests"] = { 79105 },	-- Breach
+					["maps"] = { 2307, 2306, },	-- Dalaran
+				}),
+				q(80321, {	-- Departure
+					["qg"] = 219885,	-- Anduin Wrynn
+					["coord"] = { 72.6, 57.7, 2307 },	-- Quest Dalaran
+					["sourceQuests"] = { 79106 },	-- Rupture
+					["g"] = {
+						-- Cloth
+						i(224453),	-- City Guard's Coronet
+						-- Leather
+						i(220379),	-- City Guard's Chainmail (doesn't load ingame?)
+						-- Mail
+						i(224455),	-- City Guard's Chainmail
+						-- Plate
+						i(224456),	-- City Guard's Greaves
+					},
+				}),
 				------ Chapter 1 ------
-				q(78529, {	-- Violet Impact
-					["sourceQuests"] = { 80500 },	-- The Bronzebeard Family
+				q(78529, {	-- Violent Impact
+					["qg"] = 217930,	-- Pile of Rubble
+					["coord"] = { 28.8, 54.5, ISLE_OF_DORN },
+					["sourceQuests"] = { 80321 },	-- Departure
 				}),
 				q(78530, {	-- Slay the Saboteurs
 					["sourceQuests"] = { 78529 },	-- Violet Impact
-					["provider"] = { "n", 211944 },	-- Lady Jaina Proudmoore
+					["provider"] = { "n", 211994 },	-- Lady Jaina Proudmoore
 					["coord"] = { 24.4, 57.1, ISLE_OF_DORN },
 				}),
 				q(78531, {	-- Urgent Recovery
@@ -108,6 +173,7 @@ root(ROOTS.Zones, m(KHAZ_ALGAR, bubbleDown({ ["timeline"] = { ADDED_11_0_2 } }, 
 					["g"] = {
 						i(219785),	-- Arachnophobic Spelunker's Battleaxe
 						i(219784),	-- Arachnophobic Spelunker's Battlestaff
+						i(219783),	-- Arachnophobic Spelunker's Crossbow
 						i(219789),	-- Arachnophobic Spelunker's Greatmace
 						i(219788),	-- Arachnophobic Spelunker's Knife
 						i(219786),	-- Arachnophobic Spelunker's Saber
@@ -129,7 +195,11 @@ root(ROOTS.Zones, m(KHAZ_ALGAR, bubbleDown({ ["timeline"] = { ADDED_11_0_2 } }, 
 					["provider"] = { "n", 217881 },	-- Baelgrim
 					["coord"] = { 39.0, 78.2, DORNOGAL },
 					["g"] = {
-						i(211962),	-- Glittering Ore (QI!)
+						o_repeated({
+							i(211962),	-- Glittering Ore (QI!)
+							o(416950),	-- Unsorted Ore Pile
+							o(416954),	-- Ore Fragment
+						}),
 					},
 				}),
 				q(78462, {	-- Echoes of Compassion
@@ -152,8 +222,8 @@ root(ROOTS.Zones, m(KHAZ_ALGAR, bubbleDown({ ["timeline"] = { ADDED_11_0_2 } }, 
 				}),
 				q(78470, {	-- The Proscenium
 					["sourceQuests"] = { 78462 },	-- Echoes of Compassion
-					["provider"] = { "n", 217879 },	-- Adelgonn
-					["coord"] = { 39.2, 78.2, ISLE_OF_DORN },
+					["provider"] = { "n", 217878 },	-- Moira Thaurissan
+					["coord"] = { 41.9, 72.7, ISLE_OF_DORN },
 				}),
 				q(79701, {	-- The Calvalry is Here
 					["sourceQuests"] = { 78470 },	-- The Proscenium
@@ -920,6 +990,7 @@ root(ROOTS.Zones, m(KHAZ_ALGAR, bubbleDown({ ["timeline"] = { ADDED_11_0_2 } }, 
 					["provider"] = { "n", 222363 },	-- Peacekeeper Leif
 					["coord"] = { 65.9, 23.8, ISLE_OF_DORN },
 					["g"] = {
+						i(223424),	-- Algari-Weave Cord
 						i(223464),	-- Algari Heavy Gauntlets
 					},
 				}),
@@ -966,7 +1037,10 @@ root(ROOTS.Zones, m(KHAZ_ALGAR, bubbleDown({ ["timeline"] = { ADDED_11_0_2 } }, 
 					["provider"] = { "n", 224708 },	-- Cenderragg
 					["coord"] = { 48.6, 60.9, ISLE_OF_DORN },
 					["g"] = {
+						i(228375),	-- Belt of Kix'arak's Bane
+						i(228376),	-- Boots of Kix'arak's Bane
 						i(228377),	-- Gauntlets of Kix'arak's Bane
+						i(228374),	-- Shoulders of Kix'arak's Bane
 					},
 				}),
 			}),
@@ -1106,8 +1180,12 @@ root(ROOTS.Zones, m(KHAZ_ALGAR, bubbleDown({ ["timeline"] = { ADDED_11_0_2 } }, 
 				["provider"] = { "o", 428135 },	-- Discarded Botanist Notes
 				["coord"] = { 31.9, 83.6, ISLE_OF_DORN },
 				["g"] = {
-					i(216882),	-- Log Entry 467-21-5 (QI!)
-					i(216888),	-- Log Entry 652-12-3 (QI!)
+					o(428167, {	-- Discarded Research Notes
+						i(216882),	-- Log Entry 467-21-5 (QI!)
+					}),
+					o(428199, {	-- Discarded Research Notes
+						i(216888),	-- Log Entry 652-12-3 (QI!)
+					}),
 					i(216889),	-- Log Entry 893-03-9 (QI!)
 				},
 			}),
@@ -1164,6 +1242,8 @@ root(ROOTS.Zones, m(KHAZ_ALGAR, bubbleDown({ ["timeline"] = { ADDED_11_0_2 } }, 
 })));
 
 root(ROOTS.HiddenQuestTriggers, {
+	-- Dalaran intro
+	q(84698),	-- Fishing up Xalatath's Rusty Coin
 	-- During questing
 	q(83622),	-- [DNT] Zone 1 Bread Crumb Completed Organically (spellID 456955), when you break free out of rocks during questID 78529 (Violet Impact)
 	q(79629),	-- [DNT] Council of Dornogal Renown Unlock (spellID 446910)

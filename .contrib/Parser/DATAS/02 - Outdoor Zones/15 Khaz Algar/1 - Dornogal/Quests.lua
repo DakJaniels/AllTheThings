@@ -11,6 +11,11 @@ root(ROOTS.Zones, m(KHAZ_ALGAR, bubbleDown({ ["timeline"] = { ADDED_11_0_2 } }, 
 					["provider"] = { "n", 219252 },	-- Alleria Windrunner
 					["coord"] = { 56.2, 48.5, AZJ_KAHET },
 				}),
+				q(84446, {	-- Renown of Khaz Algar
+					["sourceQuests"] = { 79197 },	-- Surface Bound
+					["provider"] = { "n", 216149 },	-- Moira Thaurissan
+					["coord"] = { 36.1, 80.3, DORNOGAL },
+				}),
 				q(79333, {	-- The Fleet Arrives
 					["sourceQuests"] = { 79197 },	-- Surface Bound
 					["provider"] = { "n", 216149 },	-- Moira Thaurissan
@@ -47,7 +52,6 @@ root(ROOTS.Zones, m(KHAZ_ALGAR, bubbleDown({ ["timeline"] = { ADDED_11_0_2 } }, 
 						82153,	-- Embassies and Envoys [A]
 						79328,	-- Embassies and Envoys [H]
 					},
-					["sourceQuestNumRequired"] = 1,
 					["provider"] = { "n", 214917 },	-- Moira Thaurissan
 					["coord"] = { 31.8, 59.4, DORNOGAL },
 				}),
@@ -133,40 +137,56 @@ root(ROOTS.Zones, m(KHAZ_ALGAR, bubbleDown({ ["timeline"] = { ADDED_11_0_2 } }, 
 			}),
 
 			------ Stay awhile and listen ------
-			q(84335, {	-- Stay awhile and listen: Alleria Windrunner
+			hqt(84335, {	-- Stay awhile and listen: Alleria Windrunner
 				["name"] = "Stay awhile and listen: Alleria Windrunner",
 				["sourceQuests"] = { 78546 },	-- Recompense
 				["provider"] = { "n", 228493 },	-- Alleria Windrunner
 				["coord"] = { 32.0, 60.5, DORNOGAL },
 			}),
-			q(84009, {	-- Stay awhile and listen: Alleria Windrunner
+			hqt(84815, {	-- Stay awhile and listen: Merrix <Councilward>
+				["name"] = "Stay awhile and listen: Merrix <Councilward>",
+				["sourceQuests"] = { 78546 },	-- Recompense
+				["provider"] = { "n", 217880 },	-- Merrix <Councilward>
+				["coord"] = { 32.0, 59.6, DORNOGAL },
+			}),
+			hqt(84009, {	-- Stay awhile and listen: Alleria Windrunner
 				["name"] = "Stay awhile and listen: Alleria Windrunner",
 				["sourceQuests"] = {
 					82153,	-- Embassies and Envoys [A]
 					79328,	-- Embassies and Envoys [H]
 				},
-				["sourceQuestNumRequired"] = 1,
 				["provider"] = { "n", 216148 },	-- Alleria Windrunner
 				["coord"] = { 34.5, 93.5, DORNOGAL },
 			}),
-			q(82461, {	-- Stay awhile and listen: Dagran Thaurissan II
+			hqt(82461, {	-- Stay awhile and listen: Dagran Thaurissan II
 				["name"] = "Stay awhile and listen: Dagran Thaurissan II",
 				["sourceQuests"] = { 78546 },	-- Recompense
 				["provider"] = { "n", 217859 },	-- Dagran Thaurissan II
 				["coord"] = { 29.8, 60.0, DORNOGAL },
 			}),
-			q(82541, {	-- Stay awhile and listen: Merrix <Councilward>
+			hqt(82541, {	-- Stay awhile and listen: Merrix <Councilward>
 				["name"] = "Stay awhile and listen: Merrix <Councilward>",
 				["sourceQuests"] = { 78546 },	-- Recompense
 				["provider"] = { "n", 214916 },	-- Merrix <Councilward>
 				["coord"] = { 29.7, 71.4, DORNOGAL },
 			}),
-			q(82542, {	-- Stay awhile and listen: Rooktender Lufsela
+			hqt(82542, {	-- Stay awhile and listen: Rooktender Lufsela
 				["name"] = "Stay awhile and listen: Rooktender Lufsela",
 				["sourceQuests"] = { 79107 },	-- After the Storm
 				["provider"] = { "n", 215039 },	-- Rooktender Lufsela
 				["coord"] = { 36.2, 95.0, DORNOGAL },
 			}),
+			hqt(82459, {	-- <Stay a while and Listen>
+				["name"] = "Stay awhile and listen: Anduin Wrynn",
+				["qg"] = 222558,	-- Anduin Wrynn
+				["coord"] = { 44.7, 44.6, DORNOGAL },
+			}),
+			hqt(82460, {	-- <Stay a while and Listen>
+				["name"] = "Stay awhile and listen: Magni Bronzebeard",
+				["qg"] = 222557,	-- Magni Bronzebeard
+				["coord"] = { 44.5, 44.5, DORNOGAL },
+			}),
+
 			n(QUESTS, sharedData({
 				["isWeekly"] = true,
 			}, {
@@ -239,5 +259,5 @@ root(ROOTS.HiddenQuestTriggers, {
 	-- Alt skip
 	q(83621),	-- can be used right after turn in 81930 or 78713 (The War Within)
 	-- 82059 (Transmutation Station)
-	--q(65440),	-- provided 15x Carved Harbinger Crest for quest? (currently in NYI)
+	--q(65440),	-- provided 15x Carved Harbinger Crest for quest? (currently in NYI) // Same for Braghe
 });

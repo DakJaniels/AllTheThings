@@ -99,6 +99,9 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.TWW, bubbleDown({ ["timeline"]
 				q(81494, {	-- Relics of War: Rak-Ahat
 					["provider"] = { "n", 224176 },	-- Eirzay
 					["coord"] = { 63.8, 26.3, NERUBAR_LOWER },
+					["g"] = {
+						i(225738),	-- Kaheti Warblade (QI!)
+					},
 				}),
 				q(81478, {	-- Relics of War: The Ruptired Lake
 					["provider"] = { "n", 224173 },	-- Eirzay
@@ -221,7 +224,7 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.TWW, bubbleDown({ ["timeline"]
 						i(226518, {	-- Phero-Escape
 							["cost"] = {{"c", KEJ, 25}},
 						}),
-						i(229193, {	-- Queen's Pheromone (CI!)	(old itemID 226520?)
+						i(226520, {	-- Queen's Pheromone (CI!)
 							["cost"] = {{"c", KEJ, 8888888}},
 						}),
 						i(223279, {	-- Royal Court Undercrawler (MOUNT!)

@@ -495,14 +495,15 @@ root(ROOTS.Zones, m(KHAZ_ALGAR, bubbleDown({ ["timeline"] = { ADDED_11_0_2 } }, 
 					["sourceQuests"] = { TEMPORARY_SOURCEQUEST },
 					["provider"] = { "n", 211409 },	-- Faerin Lothar
 					["coord"] = { 59.6, 25.7, AZJ_KAHET },
+					["isBreadcrumb"] = true,
 				}),
 				q(80564, {	-- Field Research
-					["sourceQuests"] = { 83306 },	-- Where the Wild Things Camp
+					["sourceQuests"] = { 83306 }, -- Where the Wild Things Camp
 					["provider"] = { "n", 220595 },	-- Orweyna
 					["coord"] = { 46.1, 68.9, AZJ_KAHET },
 				}),
 				q(80563, {	-- Tool of Attunement
-					["sourceQuests"] = { 83306 },	-- Where the Wild Things Camp // require Field Research in quest log
+					["sourceQuests"] = { 83306 }, -- Where the Wild Things Camp
 					["provider"] = { "n", 220595 },	-- Orweyna
 					["coord"] = { 46.1, 68.9, AZJ_KAHET },
 					["g"] = {
@@ -691,7 +692,7 @@ root(ROOTS.Zones, m(KHAZ_ALGAR, bubbleDown({ ["timeline"] = { ADDED_11_0_2 } }, 
 			}),
 			header(HEADERS.AchCriteria, 40636.08, {	-- The Second Front
 				q(79574, {	-- The Second Front
-					["sourceQuests"] = { TEMPORARY_SOURCEQUEST },
+					["sourceQuests"] = { 78630 },	-- The Rise of the Reckoning
 					["provider"] = { "n", 217133 },	-- Kal Smoulderbrow
 					["coord"] = { 32.1, 46.1, AZJ_KAHET },
 					["isBreadcrumb"] = true,
@@ -724,9 +725,10 @@ root(ROOTS.Zones, m(KHAZ_ALGAR, bubbleDown({ ["timeline"] = { ADDED_11_0_2 } }, 
 					["sourceQuests"] = { TEMPORARY_SOURCEQUEST },
 					["provider"] = { "n", 211409 },	-- Faerin Lothar
 					["coord"] = { 59.6, 25.7, AZJ_KAHET },
+					["isBreadcrumb"] = true,
 				}),
 				q(83628, {	-- Tense Recovery
-					["sourceQuests"] = { 83716 },	-- Beneath the Roots
+					["sourceQuests"] = { 83716 }, -- Beneath the Roots
 					["provider"] = { "n", 227222 },	-- Ysabel Gleamgaard
 					["coord"] = { 26.8, 55.9, AZJ_KAHET },
 				}),
@@ -850,8 +852,8 @@ root(ROOTS.Zones, m(KHAZ_ALGAR, bubbleDown({ ["timeline"] = { ADDED_11_0_2 } }, 
 				}),
 				q(81890, {	-- Unfulfilled Requests
 					["sourceQuests"] = { TEMPORARY_SOURCEQUEST },
-					--["provider"] = { "n", NNNNNN },
-					--["coord"] = { X, Y, AZJ_KAHET },
+					["provider"] = { "n", 208782 },	-- Executor Nizrek
+					["coord"] = { 52.9, 46.1, AZJ_KAHET },
 					["isBreadcrumb"] = true
 				}),
 				q(81928, {	-- The Voice of the People
@@ -903,6 +905,8 @@ root(ROOTS.Zones, m(KHAZ_ALGAR, bubbleDown({ ["timeline"] = { ADDED_11_0_2 } }, 
 					["coord"] = { 63.9, 16.3, NERUBAR },
 					["g"] = {
 						i(226176),	-- Love's Last Grasp
+						i(226173),	-- Boots of the First Embrace
+						i(226175),	-- Traditional Nuptial Shoulderpads
 					},
 				}),
 			}),
@@ -1109,11 +1113,37 @@ root(ROOTS.Zones, m(KHAZ_ALGAR, bubbleDown({ ["timeline"] = { ADDED_11_0_2 } }, 
 					i(228913),	-- Dubious Vial of Vigor (QI!)
 				},
 			}),
+			------ Sort? ------
+			q(83587, {	-- Our Chance to Strike
+				--["sourceQuests"] = { ? },	-- ?
+				["provider"] = { "n", 227217 },	-- Webster
+				["coord"] = { 29.6, 73.5, DORNOGAL },
+			}),
+			q(82124, {	-- The Beginning of the End
+				["sourceQuests"] = { 83587 },	-- Our Chance to Strike
+				["provider"] = { "n", 208782 },	-- Executor Nizrek
+				["coord"] = { 52.9, 46.1, NERUBAR },
+			}),
 			n(BONUS_OBJECTIVES, {
 				q(81670, {	-- Shattered Silk
 					["coord"] = { 72.8, 55.0, AZJ_KAHET },
 				}),
 			}),
+
+			-- Stay a while
+			hqt(81946, {	-- Stay awhile and listen: Anduin Wrynn
+				["name"] = "Stay awhile and listen: Anduin Wrynn",
+				["sourceQuests"] = { 78228 },	-- Into a Skittering City
+				["provider"] = { "n", 211351 },	-- Anduin Wrynn
+				["coord"] = { 43.2, 56.2, HALLOWFALL },
+			}),
+			hqt(82033, {	-- Stay awhile and listen: Alleria Windrunner
+				["name"] = "Stay awhile and listen: Alleria Windrunner",
+				["sourceQuests"] = { 78244 },	-- Kaheti Hospitality
+				["provider"] = { "n", 217385 },	-- Alleria Windrunner
+				["coord"] = { 60.6, 68.7, HALLOWFALL },
+			}),
+
 		}),
 	}),
 })));
@@ -1128,7 +1158,4 @@ root(ROOTS.HiddenQuestTriggers, {
 	q(84471),	-- triggered after turn in questID 84682 (Of Pacts and Patrons) (spellID 463432 - [DNT] Choice Complete Credit)
 	q(84681),	-- triggered after turn in questID 84682 (Of Pacts and Patrons) (spellID 463432 - [DNT] Choice Complete Credit)
 	q(84666),	-- triggered after turn in questID 84664 (Making the Underworld Go Round) (spellID 463299 - [DNT] Push Loot)
-	-- Dialogs
-	q(81946),	-- 'Stay awhile and listen' - Anduin Wrynn - druing questID 78231 (Like a Spider on the Wall)
-	q(82033),	-- 'Stay awhile and listen' - Alleria Windrunner - during questID 78248 (What We Still Have)
 });
